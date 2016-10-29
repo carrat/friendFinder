@@ -1,1 +1,1 @@
-<?php include_once("server.js"); ?>
+<?php include_once("app/public/home.html"); ?>
