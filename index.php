@@ -1,1 +1,1 @@
-<?php include_once("/app/public/index.html"); ?>
+<?php include_once("index.html"); ?>
