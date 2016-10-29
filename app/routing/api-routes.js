@@ -22,17 +22,13 @@
 
 var friendsData = require('../data/friends.js');
 
-var express = require('express');
-var router = express.Router();
-
-
 module.exports = function (app) {
 
-	app.get('/api/friends', function (req, res) {
+	app.get('/api/friends', function(req, res) {
 		res.json(friendsData);
 	});
 
-	app.post('/api/friends', function (req, res) {
+	app.post('/api/friends', function(req, res) {
 
 		// find new user's scores
 
@@ -40,10 +36,16 @@ module.exports = function (app) {
 		var comparisonScore = 0;
 		var comparisonScoreChamp = 500;
 		var bestMatch;
+		console.log("Check");
+		console.log(req.body);
 
 		for (i=0; i<friendsData.length; i++) {
 			for (j=0; j<friendsData[i].scores.length; j++) {
-				comparisonScore += Math.abs(friendsData[i].scores[j] - req.body[j]);
+
+				console.log("First Score: " + friendsData[i].scores[j]);
+				
+				console.log(req.body.scores[j]);
+				comparisonScore += Math.abs(friendsData[i].scores[j] - req.body.scores[j]);
 				if (comparisonScore <= comparisonScoreChamp) {
 					comparisonScoreChamp = comparisonScore;
 					bestMatch = i;
