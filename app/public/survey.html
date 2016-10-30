@@ -148,7 +148,7 @@
 
         <hr>
 
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="submit">
         <i class="fa fa-check-circle" ></i> Submit</button>
 
         </form>
@@ -169,6 +169,7 @@
           </div>
           <div class="modal-body">
             <h2 id="matchName"></h2>
+            <h2 id="score"></h2>
             <img id="matchImg" src="" alt="">
           </div>
           <div class="modal-footer">
@@ -182,9 +183,9 @@
 <!-- Start footer -->
 
     <footer class="footer">
-        <h5><a href="/api/friends">View API Friends List</a></h5> 
+        <h5><a href="/api/friends" target="_blank">View API Friends List</a></h5> 
         <span class="white">|</span> 
-        <h5><a href="https://github.com/carrat/friendFinder">GitHub Repo</a></h5>
+        <h5><a href="https://github.com/carrat/friendFinder"  target="_blank">GitHub Repo</a></h5>
     </footer>
 
 
@@ -237,8 +238,8 @@
             console.log("Begin User Data");
 
             var userData = {
-                name: $("#name").val(),
-                photo: $("#photo").val(),
+                name: $("#name").val().trim(),
+                photo: $("#photo").val().trim(),
                 scores: [
                 $("#question1").val(), 
                 $("#question2").val(), 
@@ -249,17 +250,22 @@
                 $("#question7").val(), 
                 $("#question8").val(), 
                 $("#question9").val(), 
-                $("#question10").val() ]
+                $("#question10").val()]
             };
 
-            console.log("User Data: " + userData);
+            console.log("User Data: " + userData.scores);
 
            
             // AJAX post the data to the friends API. 
-            $.post("/api/friends", userData, function(data){
+            var currentURL = window.location.origin;
 
-                $("#matchName").text(data.name);
-                $("#matchImg").attr("src", data.photo);
+            // AJAX post the data to the friends API. 
+            $.post(currentURL + "/api/friends", userData, function(data){
+
+                // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                $("#matchName").text(data.bestFriend.name);
+                $("#score").text("Confidence: " + data.score + " %");
+                $('#matchImg').attr("src", data.bestFriend.photo);
 
                 $("#bestMatch").modal('toggle');
 
@@ -269,7 +275,7 @@
             alert("You must fill out all fields");
         }
         
-        return false;
+      
     });
 
    

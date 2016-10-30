@@ -1,6 +1,6 @@
 var friends = [{
-  "name":"1",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"E.T.",
+  "photo":"http://i.telegraph.co.uk/multimedia/archive/01474/et_1474485b.jpg",
   "scores":[
      1,
      1,
@@ -15,8 +15,8 @@ var friends = [{
    ]
 },
 {
-  "name":"2",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"George Carlin",
+  "photo":"https://s-media-cache-ak0.pinimg.com/originals/8a/cc/1b/8acc1bded9c43b1c939c3bbadecfce78.jpg",
   "scores":[
      2,
      2,
@@ -31,8 +31,8 @@ var friends = [{
    ]
 },
 {
-  "name":"3",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Teddy Roosevelt",
+  "photo":"http://www.uncompromisingcommitment.org/wp-content/sdaolpu/2012/11/UC-Teddy.jpg",
   "scores":[
      3,
      3,
@@ -47,8 +47,8 @@ var friends = [{
    ]
 },
 {
-  "name":"4",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Gonzo",
+  "photo":"http://img.lum.dolimg.com/v1/images/character_themuppets_gonzo_9c3596c6.jpeg?region=0,0,300,300",
   "scores":[
      4,
      4,
@@ -63,8 +63,8 @@ var friends = [{
    ]
 },
 {
-  "name":"Big Bird",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Andre the Giant",
+  "photo":"http://thacover2.com/wp-content/uploads/2015/11/andre-the-giant.jpg",
   "scores":[
      5,
      5,
@@ -79,8 +79,8 @@ var friends = [{
    ]
 },
 {
-  "name":"6",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Buddy Ackerman",
+  "photo":"http://vignette3.wikia.nocookie.net/villains/images/b/ba/Buddy-ackerman-swimming-with-sharks.jpg/revision/latest?cb=20150120152036",
   "scores":[
      5,
      1,
@@ -95,8 +95,8 @@ var friends = [{
    ]
 },
 {
-  "name":"7",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Bigfoot",
+  "photo":"https://www.geek.com/wp-content/uploads/2016/03/bigfoot-625x440.jpg",
   "scores":[
      1,
      2,
@@ -111,8 +111,8 @@ var friends = [{
    ]
 },
 {
-  "name":"8",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Ralphie",
+  "photo":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxMzY2NTYzOF5BMl5BanBnXkFtZTcwOTQ5NDAyMg@@._V1_SX640_SY720_.jpg",
   "scores":[
      5,
      4,
@@ -127,8 +127,8 @@ var friends = [{
    ]
 },
 {
-  "name":"9",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Yosemite Sam",
+  "photo":"http://static5.comicvine.com/uploads/original/2/25109/450564-ys2.jpg",
   "scores":[
      5,
      4,
@@ -143,8 +143,8 @@ var friends = [{
    ]
 },
 {
-  "name":"10",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Robert Wadlow",
+  "photo":"http://tallsome.com/wp-content/uploads/2014/09/Sk%C3%A6rmbillede-2014-09-20-kl.-16.55.56.jpg",
   "scores":[
      5,
      1,
@@ -159,8 +159,8 @@ var friends = [{
    ]
 },
 {
-  "name":"11",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Evel Knievel",
+  "photo":"http://dailydsports.com/wp-content/uploads/2015/11/20151119-5-evel.jpg",
   "scores":[
      2,
      4,
@@ -175,8 +175,8 @@ var friends = [{
    ]
 },
 {
-  "name":"12",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Grandma Moses",
+  "photo":"http://a4.files.biography.com/image/upload/c_fit,cs_srgb,dpr_1.0,h_1200,q_80,w_1200/MTE1ODA0OTcxNzMyMDEwNTA5.jpg",
   "scores":[
      1,
      3,
@@ -191,8 +191,8 @@ var friends = [{
    ]
 },
 {
-  "name":"13",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Mrs. Peacock",
+  "photo":"https://s-media-cache-ak0.pinimg.com/originals/f2/bf/92/f2bf9237ace94afe2b2dd2051a4555f1.jpg",
   "scores":[
      2,
      3,
@@ -207,8 +207,8 @@ var friends = [{
    ]
 },
 {
-  "name":"14",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Gilligan",
+  "photo":"https://metvnetwork.s3.amazonaws.com/qRNC6-1457728234-2467-list_items-gilligan.jpg",
   "scores":[
      5,
      3,
@@ -223,8 +223,8 @@ var friends = [{
    ]
 },
 {
-  "name":"15",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Sloth",
+  "photo":"http://www.animalfactguide.com/wp-content/uploads/2015/09/sloth4.jpg",
   "scores":[
      1,
      2,
@@ -239,8 +239,8 @@ var friends = [{
    ]
 },
 {
-  "name":"16",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Grizzly Adams",
+  "photo":"http://ll-media.tmz.com/2016/01/15/0115-main-haggerty-getty-02-1200x630.jpg",
   "scores":[
      5,
      5,
@@ -255,8 +255,8 @@ var friends = [{
    ]
 },
 {
-  "name":"17",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Sherlock Holmes",
+  "photo":"http://ichef-1.bbci.co.uk/news/660/cpsprodpb/153B4/production/_89046968_89046967.jpg",
   "scores":[
      5,
      4,
@@ -271,8 +271,8 @@ var friends = [{
    ]
 },
 {
-  "name":"18",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Grumpy Cat",
+  "photo":"http://i2.kym-cdn.com/photos/images/newsfeed/000/406/325/b31.jpg",
   "scores":[
      2,
      2,
@@ -287,8 +287,8 @@ var friends = [{
    ]
 },
 {
-  "name":"19",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"The Wicked Witch of the West",
+  "photo":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTM3MDk2MTk3OV5BMl5BanBnXkFtZTcwNzg4NTkxNA@@._V1_SX640_SY720_.jpg",
   "scores":[
      5,
      5,
@@ -303,8 +303,8 @@ var friends = [{
    ]
 },
 {
-  "name":"20",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+  "name":"Maxwell Smart",
+  "photo":"https://s-media-cache-ak0.pinimg.com/originals/fa/94/6c/fa946ca08d98a1974d7a38dcb13034d2.jpg",
   "scores":[
      1,
      1,

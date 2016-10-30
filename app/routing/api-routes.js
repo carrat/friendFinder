@@ -18,7 +18,7 @@
 //Once you've found the current user's most compatible friend, display the result as a modal pop-up.
 
 //The modal should display both the name and picture of the closest match.
-
+var path = require('path');
 
 var friendsData = require('../data/friends.js');
 
@@ -30,32 +30,37 @@ module.exports = function (app) {
 
 	app.post('/api/friends', function(req, res) {
 
-		// find new user's scores
-
 		//find user with closest compatability
 		var comparisonScore = 0;
 		var comparisonScoreChamp = 500;
 		var bestMatch;
-		console.log("Check");
-		console.log(req.body);
+
+		console.log("Friends: " + friendsData.length);
 
 		for (i=0; i<friendsData.length; i++) {
+			comparisonScore = 0;
 			for (j=0; j<friendsData[i].scores.length; j++) {
-
-				console.log("First Score: " + friendsData[i].scores[j]);
-				
-				console.log(req.body.scores[j]);
-				comparisonScore += Math.abs(friendsData[i].scores[j] - req.body.scores[j]);
-				if (comparisonScore <= comparisonScoreChamp) {
-					comparisonScoreChamp = comparisonScore;
-					bestMatch = i;
-				}
+				comparisonScore += Math.abs(friendsData[i].scores[j] - req.body.scores[j]);	
 			}
+			console.log("Comparison Score Champ: " + comparisonScoreChamp);
+			console.log("Comparison Score: " + comparisonScore);
+
+			if (comparisonScore <= comparisonScoreChamp) {		
+				comparisonScoreChamp = comparisonScore;
+				bestMatch = i;
+			}
+			console.log("Best Match: " + bestMatch);
 		}
 
 		friendsData.push(req.body);
 
-		res.json(friendsData[bestMatch]);
+		var bestFriend = friendsData[bestMatch];
+
+		var confidence = (((40 - comparisonScoreChamp)/40)*100).toFixed(2);
+
+		var data = {'bestFriend': bestFriend, 'score': confidence};
+
+		res.json(data);
 		
 	});
 };

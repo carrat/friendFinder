@@ -232,6 +232,17 @@ select {
 	font-weight: 300;
 }
 
+#score {
+	color: #2a2c37;
+	font-family: 'Libre Franklin', sans-serif;
+	font-size: 22px;
+	font-weight: 300;
+}
+
+#matchImg {
+	max-width: 90%;
+}
+
 
 
 
