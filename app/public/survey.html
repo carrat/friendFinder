@@ -26,25 +26,18 @@
 
 </head>
 <body>
-
     <div class="container">
-
     <form role="form">
         <h1><i class="fa fa-tachometer" ></i><span class="white">match</span>Point</h1>
         <hr>
         <h3><i class="fa fa-user-circle" ></i> Tell us about yourself</h3>
-
         <h4><i class="fa fa-address-card"></i> Your Name *</h4>
-
         <input type="text" name="" id="name" class="form-control entry" required >
-
         <h4><i class="fa fa-photo" ></i> Link to Photo *</h4>
         <input type="text" name="" id="photo" class="form-control entry" required >
-
         <hr>
         <h3><i class="fa fa-signal" ></i> Choose how much you agree with each statement from 1 (Strongly Disagree) to 5 (Strongly Agree).
         </h3>
-
 <!-- Start Questions -->
         <h6><i class="fa fa-quote-left" ></i> Daylight Savings Time is a conspiracy perpetrated by vampires.  <i class="fa fa-quote-right" ></i></h6>
         <select  data-placeholder=""  id="question1" class="chosen-select">
@@ -96,7 +89,7 @@
             <option value="5">5 (Strongly Agree)</option>
         </select>
 
-        <h6><i class="fa fa-quote-left" ></i> Where there's a will, there's a way. And usually a corpse. . <i class="fa fa-quote-right" ></i></h6>
+        <h6><i class="fa fa-quote-left" ></i> Where there's a will, there's a way. And usually a corpse. <i class="fa fa-quote-right" ></i></h6>
         <select  data-placeholder=""  id="question6" class="chosen-select">
             <option value=""></option>
             <option value="1">1 (Strongly Disagree)</option>
@@ -145,25 +138,18 @@
             <option value="4">4</option>
             <option value="5">5 (Strongly Agree)</option>
         </select>
-
         <hr>
-
         <button type="button" class="btn btn-primary btn-lg btn-block" id="submit">
         <i class="fa fa-check-circle" ></i> Submit</button>
-
         </form>
-
     </div>
 
 <!-- Start Modal -->
-
     <div id="bestMatch" class="modal fade" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-
              <h1 class=""><i class="fa fa-tachometer" ></i>matchPoint</h1>
             <h2 class="modal-title"><strong>Best Match</strong></h2>
           </div>
@@ -176,12 +162,10 @@
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
-
       </div>
     </div>
 
 <!-- Start footer -->
-
     <footer class="footer">
         <h5><a href="/">matchPoint Home</a></h5> 
         <span class="white">|</span> 
@@ -190,14 +174,10 @@
         <h5><a href="https://github.com/carrat/friendFinder"  target="_blank">GitHub Repo</a></h5>
     </footer>
 
-
-
 </body>
 </html>
 
-
-  <script type="text/javascript">
-
+<script type="text/javascript">
    // Chosen CSS
     var config = {
       '.chosen-select'           : {},
@@ -206,15 +186,11 @@
       '.chosen-select-no-results': {no_results_text:'Oops, nothing found!'},
       '.chosen-select-width'     : {width:"95%"}
     }
-    
     for (var selector in config) {
       $(selector).chosen(config[selector]);
     }
-
+// submit click handler
     $("#submit").on("click", function(){
-
-        console.log("Begin User Data");
-
         // Form validation
         function validateForm() {
           var isValid = true;
@@ -230,15 +206,9 @@
           });
           return isValid;
         }
-
-        console.log("Valid:" +  validateForm());
-
         // If all required fields are filled
         if (validateForm() == true) {
             // Create an object for the user's data
-
-            console.log("Begin User Data");
-
             var userData = {
                 name: $("#name").val().trim(),
                 photo: $("#photo").val().trim(),
@@ -255,31 +225,19 @@
                 $("#question10").val()]
             };
 
-            console.log("User Data: " + userData.scores);
-
-           
             // AJAX post the data to the friends API. 
             var currentURL = window.location.origin;
-
             // AJAX post the data to the friends API. 
             $.post(currentURL + "/api/friends", userData, function(data){
-
                 // Grab the result from the AJAX post so that the best match's name and photo are displayed.
                 $("#matchName").text(data.bestFriend.name);
                 $("#score").text("Confidence: " + data.score + " %");
                 $('#matchImg').attr("src", data.bestFriend.photo);
-
                 $("#bestMatch").modal('toggle');
-
             });
         }
         else {
             alert("You must fill out all fields");
-        }
-        
-      
+        } 
     });
-
-   
-
-  </script>
+</script>
