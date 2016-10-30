@@ -17,14 +17,13 @@ body {
 }
 
 a {
-	color: #000000;
+	color: none;
 	font-style: none;
 	font-variant: none;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #d8931c;
 	font-style: none;
 	font-variant: none;
 	text-decoration: none;
@@ -241,6 +240,17 @@ select {
 
 #matchImg {
 	max-width: 90%;
+}
+
+
+.logo-link {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.logo-link:hover {
+	color: #ffffff;
+	text-decoration: none;
 }
 
 
